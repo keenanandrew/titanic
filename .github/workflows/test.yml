@@ -23,5 +23,9 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name:
+      - name: Clean the data
+        run: python clean.py
+
+      - name: Train the model
+        run: python train.py
 
